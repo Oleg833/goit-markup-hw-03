@@ -24,51 +24,75 @@ h1,h2,h3, p {
   --accent-text-color: #757575;
   --accent-bgd-color: #2F303A;
 }
+header {
+  border-bottom: 1px solid #ECECEC;;
+}
+header .container {
+  display: flex;
+}
+.main-nav {
+  display: flex;
+}
+.site-nav,
+  .auth-nav,
+    .ul-portfolio {
+  display: flex;
+}
 .link {
   text-decoration: none;
-}
+ }
 .list {
   list-style: none;
-}
-ul {
   padding: 0;
   margin: 0;
 }
-::selection {
+.site-nav .li+.li,
+  .auth-nav .li+.li {
+  margin-left: 50px; 
+}
+.site-nav .li:first-child {
+  margin-left: 93px;
+}
+.auth-nav .li:first-child {
+  margin-left: 338px;
+}
+.auth-nav .link,
+  .site-nav .link {
+  display: block;
+  padding: 32px 0;
+}
+.card-portfolio .link {
+  display: block;
+  padding: 32px 0;
+}
+/* .site-nav .li,
+.auth-nav .li {
+  outline: solid 2px red;
+} */
+/* ::selection {
   color: var(--primary-white-color);
   background-color: var(--accent-bgd-color);
-}
-.section {
-  padding: 0 64px;
-  outline: 1px solid red;
-}
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-.img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.portfolio-img {
-  display: block;
-  max-width: 100%;
-  height: auto;  
-}
+} */
 .logo {
+  display: block;
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-left: 0;  
 }
 .logo-span {
   color: #000000;
 }
-.ul-nav {
+.main-nav .logo {
+  padding: 24px 0 25px 0;
+}
+.footer .logo {
+  padding: 60px 0 20px 0;
+}
+.site-nav,
+  .auth-nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -80,27 +104,13 @@ ul {
 .auth {
   color: var(--accent-text-color);
 }
-.link-current,
-  .nav:hover,
-  .nav:focus,
-  .auth:hover,
-  .auth:focus {
-  color: var(--accent-color);
+.section {
+  padding-top: 94px;
+  text-align: center;
+  /* outline: 1px solid red; */
 }
-.hero-studio {
-  background-color: var(--accent-bgd-color);
-}
-.hero-title{
-  color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
+
 .btn {
-  display: inline-block;
-  /* padding: 20px 40px; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent solid 1px;
   border-radius: 4px;
@@ -112,18 +122,17 @@ ul {
 .btn-studio {
   color: var(--primary-white-color);
   background:var(--accent-color);
-  /* position: absolute; */
   min-width: 216px;
   height: 50px;
-  left: 692px;
-  top: 430px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  margin-top: 30px;
 }
 .btn-studio:hover,
 .btn-studio:focus {
   color: #188CE8;
+  outline: solid 1px transparent;
 }
 .btn-portfolio {
   color: var(--primary-text-color);
@@ -137,6 +146,7 @@ ul {
   .btn-portfolio:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  outline: solid 1px transparent;
 }
 .visually-hidden {
   position: absolute;
@@ -150,15 +160,40 @@ ul {
   clip-path: inset(50%);
   margin: -1px;
 }
+.features .list,
+.work .list,
+.comand .list {
+  display: flex;
+}
+.work .img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+.work .li+.li {
+  margin-left: 15px;
+}
+.card-portfolio .img {
+  display: block;
+  /* max-width: 100%; */
+  height: auto;
+}
+.card-portfolio-item {
+  padding: 20px 24px;
+}
 .features {
   font-size: 14px;
+  text-align: left;
 }
 .features-title {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-transform: uppercase;  
+  text-transform: uppercase;
+  margin-bottom: 10px;  
 }
 .features-text {
   color: var(--accent-text-color);
@@ -167,28 +202,75 @@ ul {
 .comand {
   background-color: #F5F4FA;
 }
-.work-title,
-  .comand-title {
+.hero-studio {
+  background-color: var(--accent-bgd-color);
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 600px;
+  /* padding: 200px 0 200px 437px; */
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.hero-studio .title {
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+ }
+.hero-studio .container {
+  max-width: 696px;
+}
+.work .title,
+  .comand .title {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
 }
-.card {
+.comand .title {
+  margin-bottom: 50px;
+}
+.card-studio {
   background-color: var(--primary-white-color);
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
+  margin-bottom: 94px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  border: transparent solid 1px;
+}
+.card-studio + .card-studio {
+  margin-left: 30px;
+}
+.card-studio .item {
+  padding-bottom: 30px;
 }
 .card-title {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .card-text {
   color: var(--accent-text-color);
 }
 .footer {
+  display: block;
   background-color: var(--accent-bgd-color);
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 252px;
 }
 .footer-span {
   color: var(--primary-white-color);
@@ -197,6 +279,7 @@ ul {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  margin-top: 0px;
 }
 .map {
   color: var(--primary-white-color);
@@ -205,7 +288,12 @@ ul {
 .tel {
   color: rgba(255, 255, 255, 0.6);  
 }
-.mailto:hover,
+
+/* .nav:hover,
+  .nav:focus,
+  .auth:hover,
+  .auth:focus,
+  .mailto:hover,
   .mailto:focus,
   .tel:hover,
   .tel:focus,
@@ -216,8 +304,22 @@ ul {
   .logo-span:hover,
   .logo-span:focus,
   .footer-span:hover,
-  .footer-span:focus {
+  .footer-span:focus, */
+  
+.link-current{
   color: var(--accent-color);
+}
+.link:hover,
+  .link:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  outline: solid 1px transparent;
+}
+.card-portfolio {
+  width: 370px;
+}
+.card-portfolio + .card-portfolio {
+  margin-left: 30px;
 }
 .portfolio-title {
   color: var(--primary-text-color);
@@ -225,9 +327,11 @@ ul {
   font-size: 18px;
   line-height: 2.00;
   letter-spacing: 0.06em;
+  margin-bottom: 10px;
 }
 .portfolio-text {
   color: var(--accent-text-color);
   font-size: 16px;
   line-height: 1.88;
+  margin-bottom: 10px;
 }
