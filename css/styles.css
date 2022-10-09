@@ -288,7 +288,6 @@ img {
 .card-portfolio-box {
   border: 1px solid #EEEEEE;
   border-top: none;
-  text-align: left;
   padding: 20px 24px;
 }
 .card-portfolio-item:not(:nth-child(3n)) {
