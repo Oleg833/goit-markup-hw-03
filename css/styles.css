@@ -35,8 +35,8 @@ img {
   align-items: center;
 }
 .main-nav,
- .site-nav,
- .auth-nav {
+ .site-nav-list,
+ .auth-nav-list {
   display: flex;
   align-items: center;
 }
@@ -58,25 +58,28 @@ img {
 .main-nav .logo {
   padding: 24px 93px 25px 0;
 }
-.site-nav,
-.auth-nav {
+.main-nav .logo-span {
+  padding: 24px 0 25px 0
+}
+.site-nav-link,
+.auth-nav-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav {
+.site-nav-link {
   color: var(--primary-text-color);
 }
-.auth {
+.auth-nav-link {
   color: var(--accent-text-color);
 }
-.site-nav .item+.item,
-.auth-nav .item+.item {
+.site-nav-item+.site-nav-item,
+.auth-nav-item+.auth-nav-item {
   margin-left: 50px;
 }
-.site-nav .link,
-.auth-nav .link {
+.site-nav-link,
+.auth-nav-link {
   display: block;
   padding: 32px 0;
 }
@@ -88,7 +91,7 @@ img {
   text-align: center;
   padding: 200px 0;
 }
-.hero-studio .heading {
+.hero-studio-heading {
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -161,19 +164,19 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
-.features .list,
-  .work .list,
-  .comand .list {
+.features-list,
+  .work-list,
+  .comand-card-list {
   display: flex;
 }
 .features {
   font-size: 14px;
   text-align: left;
 }
-.features .item+.item {
+.features-item+.features-item {
   margin-left: 30px;
 }
-.features .title {
+.features-title {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -181,56 +184,56 @@ img {
   text-transform: uppercase;
   margin-bottom: 10px;  
 }
-.features .text {
+.features-text {
   color: var(--accent-text-color);
   line-height: 1.71;
 }
 .work {
   padding-top: 0;
 }
-.work .heading {
+.work-heading {
   margin-bottom: 50px;
 }
-.work .item+.item {
+.work-item+.work-item {
   margin-left: 30px;
 }
-.work .heading,
-  .comand .heading {
+.work-heading,
+  .comand-card-heading {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
-.comand {
+.comand-card {
   background-color: #F5F4FA;
 }
-.comand .heading {
+.comand-card-heading {
   margin-bottom: 50px;
 }
-.comand .card {
+.comand-card-item {
   background-color: var(--primary-white-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
-.comand .card+.card {
+.comand-card-item+.comand-card-item {
   margin-left: 30px;
 }
-.comand .item {
+.comand-card-box {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   border: transparent solid 1px;
   padding-top: 30px;
   padding-bottom: 30px;  
 }
-.comand .title {
+.comand-card-title {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 9px;
 }
-.comand .text {
+.comand-card-text {
   color: var(--accent-text-color);
 }
 .footer {
@@ -243,7 +246,7 @@ img {
 .footer-span {
   color: var(--primary-white-color);
 }
-.footer .item:not(:last-child) {
+.footer-nav-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address {
@@ -268,34 +271,34 @@ img {
   text-decoration: underline;
   outline: solid 1px transparent;
 }
-.filter {
+.filter-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.card-portfolio .link {
+.card-portfolio-list {
   display: block;
 }
-.card-portfolio .link:hover,
-  .card-portfolio .link:focus {
+.card-portfolio-link:hover,
+  .card-portfolio-link:focus {
     text-decoration: none;
   }
-.card-portfolio-item {
+.card-portfolio-box {
   border: 1px solid #EEEEEE;
   border-top: none;
   text-align: left;
   padding: 20px 24px;
 }
-.card-portfolio:not(:nth-child(3n)) {
+.card-portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.card-portfolio:not(:nth-last-child(-n+3)) {
+.card-portfolio-item:not(:nth-last-child(-n+3)) {
   margin-bottom: 30px;
 }
-.portfolio-item:not(:last-child) {
+.btn-portfolio-item:not(:last-child) {
   margin-right: 8px;
 }
-.portfolio-title {
+.card-portfolio-title {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -303,12 +306,12 @@ img {
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
-.portfolio-text {
+.card-portfolio-text {
   color: var(--accent-text-color);
   font-size: 16px;
   line-height: 1.88;
 }
-.portfolio-list {
+.card-portfolio-list {
   display: flex;
   flex-wrap: wrap;
 }
