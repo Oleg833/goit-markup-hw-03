@@ -86,8 +86,7 @@ img {
 .hero-studio {
   background-color: var(--accent-bgd-color);
   max-width: 1600px;
-  height: 600px;
-  margin: 0 auto;
+   margin: 0 auto;
   text-align: center;
   padding: 200px 0;
 }
