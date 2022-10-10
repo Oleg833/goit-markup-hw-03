@@ -56,7 +56,8 @@ img {
   color: #000000;
 }
 .main-nav .logo {
-  padding: 24px 93px 25px 0;
+  padding: 24px 0 25px 0;
+  margin-right: 93px;
 }
 .main-nav .logo-span {
   padding: 24px 0 25px 0
